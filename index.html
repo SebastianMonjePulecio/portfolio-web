@@ -1,239 +1,156 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebastián Monje | Data & IT</title>
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Rocket } from "lucide-react";
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-[#0b1220] text-white">
+      {/* HERO */}
+      <section className="flex flex-col items-center justify-center text-center min-h-screen px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-6"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400">
+            <Rocket size={16} /> Disponible para trabajo remoto
+          </div>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+          <h1 className="text-5xl md:text-6xl font-bold">
+            Sebastián <span className="text-blue-400">Monje</span>
+          </h1>
 
-    body {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #e2e8f0;
-      scroll-behavior: smooth;
-    }
+          <p className="text-gray-400 max-w-xl mx-auto">
+            Data Analyst & IT Automation Specialist enfocado en transformar datos
+            en decisiones y optimizar procesos con Python, SQL y cloud.
+          </p>
 
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(15, 23, 42, 0.6);
-      padding: 15px;
-      text-align: center;
-      z-index: 1000;
-    }
+          <div className="flex gap-3 justify-center">
+            <Button className="bg-blue-500 hover:bg-blue-600">
+              Ver proyectos
+            </Button>
+            <Button variant="outline">Contactar</Button>
+          </div>
+        </motion.div>
+      </section>
 
-    nav a {
-      margin: 0 15px;
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
+      {/* ABOUT */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-2xl font-semibold text-blue-400 mb-4"
+        >
+          Sobre mí
+        </motion.h2>
+        <p className="text-gray-400 leading-relaxed">
+          Soy profesional en IT con 3 años de experiencia en análisis de datos,
+          automatización y soporte técnico. He trabajado en entornos remotos e híbridos
+          optimizando procesos con Python, scripts y soluciones cloud.
+        </p>
+      </section>
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+      {/* SKILLS */}
+      <section className="max-w-4xl mx-auto px-6 py-10">
+        <h2 className="text-2xl font-semibold text-blue-400 mb-6">Skills</h2>
+        <div className="flex flex-wrap gap-3">
+          {[
+            "Python",
+            "SQL",
+            "AWS",
+            "Excel",
+            "Automation",
+            "Git",
+            "Data Analysis",
+            "Docker",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
 
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      {/* EXPERIENCE */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-semibold text-blue-400 mb-6">
+          Experiencia
+        </h2>
 
-    header h1 {
-      font-size: 3rem;
-      color: #38bdf8;
-      animation: fadeIn 1.5s ease-in-out;
-    }
+        <div className="space-y-4">
+          <Card className="bg-white/5 border-white/10">
+            <CardContent className="p-5">
+              <h3 className="font-semibold">IT & Data Analyst</h3>
+              <p className="text-gray-400 text-sm">
+                Automatización de procesos, análisis de datos y dashboards
+                para soporte de decisiones.
+              </p>
+            </CardContent>
+          </Card>
 
-    header p {
-      margin-top: 10px;
-      color: #94a3b8;
-      animation: fadeIn 2s ease-in-out;
-    }
+          <Card className="bg-white/5 border-white/10">
+            <CardContent className="p-5">
+              <h3 className="font-semibold">IT Support</h3>
+              <p className="text-gray-400 text-sm">
+                Soporte técnico, administración de sistemas y optimización de infraestructura.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #38bdf8;
-      color: #020617;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+      {/* PROJECTS */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-semibold text-blue-400 mb-6">
+          Proyectos
+        </h2>
 
-    .btn:hover {
-      transform: scale(1.05);
-      background: #0ea5e9;
-    }
+        <div className="grid md:grid-cols-2 gap-4">
+          {["Data Pipeline", "Automation Scripts", "Dashboard BI"].map(
+            (project) => (
+              <Card
+                key={project}
+                className="bg-white/5 border-white/10 hover:scale-[1.02] transition"
+              >
+                <CardContent className="p-5">
+                  <h3 className="font-semibold">{project}</h3>
+                  <p className="text-gray-400 text-sm">
+                    Proyecto enfocado en optimización y análisis de datos.
+                  </p>
+                </CardContent>
+              </Card>
+            )
+          )}
+        </div>
+      </section>
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 80px 20px;
-    }
+      {/* CONTACT */}
+      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-2xl font-semibold text-blue-400 mb-4">
+          Contacto
+        </h2>
 
-    section {
-      margin-bottom: 80px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
+        <div className="flex justify-center gap-4">
+          <Button variant="outline" className="gap-2">
+            <Mail size={16} /> Email
+          </Button>
+          <Button variant="outline" className="gap-2">
+            <Github size={16} /> GitHub
+          </Button>
+          <Button variant="outline" className="gap-2">
+            <Linkedin size={16} /> LinkedIn
+          </Button>
+        </div>
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 15px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: rgba(30, 41, 59, 0.6);
-      padding: 10px 15px;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(30, 41, 59, 0.6);
-      padding: 20px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.02);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #64748b;
-    }
-
-    /* Animación */
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-  </style>
-</head>
-
-<body>
-
-<nav>
-  <a href="#about">Sobre mí</a>
-  <a href="#skills">Habilidades</a>
-  <a href="#projects">Proyectos</a>
-  <a href="#contact">Contacto</a>
-</nav>
-
-<header>
-  <h1>Sebastián Monje</h1>
-  <p>Data Analyst | IT Support | Automation</p>
-  <a href="#projects" class="btn">Ver proyectos</a>
-</header>
-
-<div class="container">
-
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>
-      Profesional en IT con experiencia en análisis de datos y automatización.
-      Me enfoco en optimizar procesos y generar valor mediante datos.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Habilidades</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Excel</div>
-      <div class="skill">Automation</div>
-      <div class="skill">Data Analysis</div>
-      <div class="skill">Git</div>
+        <p className="text-gray-500 text-sm mt-6">
+          © 2026 Sebastián Monje — Built for remote opportunities
+        </p>
+      </section>
     </div>
-  </section>
-
-  <section id="projects">
-    <h2>Proyectos</h2>
-    <div class="projects">
-
-      <div class="card">
-        <h3>📊 Data Analysis</h3>
-        <p>Análisis exploratorio con Python y visualización de datos.</p>
-      </div>
-
-      <div class="card">
-        <h3>🤖 Automation</h3>
-        <p>Automatización de tareas con scripts en Python.</p>
-      </div>
-
-      <div class="card">
-        <h3>📈 Dashboard</h3>
-        <p>Creación de dashboards para toma de decisiones.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p>Email: tuemail@email.com</p>
-    <p>GitHub: <a href="#">Tu GitHub</a></p>
-    <p>LinkedIn: <a href="#">Tu LinkedIn</a></p>
-  </section>
-
-</div>
-
-<footer>
-  © 2026 Sebastián Monje
-</footer>
-
-<script>
-  const sections = document.querySelectorAll("section");
-
-  const reveal = () => {
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        sec.classList.add("visible");
-      }
-    });
-  };
-
-  window.addEventListener("scroll", reveal);
-</script>
-
-</body>
-</html>
+  );
+}
