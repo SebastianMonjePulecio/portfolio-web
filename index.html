@@ -11,37 +11,10 @@
     nav { position: fixed; top: 0; width: 100%; backdrop-filter: blur(14px); background: rgba(10,15,25,0.6); display: flex; justify-content: center; gap: 28px; padding: 18px; z-index: 1000; flex-wrap: wrap; }
     nav a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
     nav a:hover { color: #38bdf8; }
-    
-    /* Selector de idioma */
-    .lang-selector {
-      position: fixed;
-      top: 18px;
-      right: 20px;
-      z-index: 1001;
-      display: flex;
-      gap: 8px;
-    }
-    .lang-btn {
-      background: rgba(30,41,59,0.8);
-      border: 1px solid rgba(56,189,248,0.3);
-      color: #94a3b8;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      transition: all 0.3s;
-    }
-    .lang-btn:hover {
-      border-color: #38bdf8;
-      color: #38bdf8;
-    }
-    .lang-btn.active {
-      background: #38bdf8;
-      color: #0b1220;
-      border-color: #38bdf8;
-      font-weight: 600;
-    }
-    
+    .lang-selector { position: fixed; top: 18px; right: 20px; z-index: 1001; display: flex; gap: 8px; }
+    .lang-btn { background: rgba(30,41,59,0.8); border: 1px solid rgba(56,189,248,0.3); color: #94a3b8; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; transition: all 0.3s; }
+    .lang-btn:hover { border-color: #38bdf8; color: #38bdf8; }
+    .lang-btn.active { background: #38bdf8; color: #0b1220; border-color: #38bdf8; font-weight: 600; }
     header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
     .tag { color: #38bdf8; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 20px; }
     h1 { font-size: 3.5rem; font-weight: 700; max-width: 900px; line-height: 1.1; }
@@ -64,26 +37,17 @@
     .repo-link { display: inline-block; margin-top: 12px; color: #38bdf8; text-decoration: none; font-weight: 500; }
     .repo-link:hover { color: #7dd3fc; }
     footer { text-align: center; padding: 40px; color: #64748b; }
-    
-    /* Ocultar elementos por idioma */
     .lang-content { display: none; }
     .lang-content.active { display: block; }
-    
-    @media (max-width: 768px) { 
-      h1 { font-size: 2.6rem; } 
-      .lang-selector { top: 70px; right: 10px; }
-      nav { padding-top: 60px; }
-    }
+    .contact-info a { color: #38bdf8; text-decoration: none; }
+    @media (max-width: 768px) { h1 { font-size: 2.6rem; } .lang-selector { top: 70px; right: 10px; } nav { padding-top: 60px; } }
   </style>
 </head>
 <body>
-
-  <!-- Selector de idioma -->
   <div class="lang-selector">
     <button class="lang-btn active" onclick="changeLanguage('es')">🇪🇸 ES</button>
     <button class="lang-btn" onclick="changeLanguage('en')">🇺🇸 EN</button>
   </div>
-
   <nav>
     <a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a>
     <a href="#skills" data-es="Skills" data-en="Skills">Skills</a>
@@ -91,93 +55,149 @@
     <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
   </nav>
 
-  <!-- VERSIÓN ESPAÑOL -->
+  <!-- ESPAÑOL -->
   <div id="content-es" class="lang-content active">
     <header>
       <div class="tag">DATA ANALYST · 4+ AÑOS EXP · PYTHON · MACHINE LEARNING</div>
       <h1>Convierto datos en decisiones</h1>
-      <p class="subtitle">
-        Data Analyst con enfoque en Machine Learning y análisis predictivo. 
-        Especializado en modelos de churn, análisis financiero y automatización de procesos.
-      </p>
+      <p class="subtitle">Data Analyst con enfoque en Machine Learning y análisis predictivo. Especializado en modelos de churn, análisis financiero y automatización de procesos.</p>
       <div class="cta">
-        <a class="btn" href="https://linkedin.com/in/sebastian-monje-5b5095269" target="_blank">💼 Ver LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/in/sebastian-monje-5b5095269/" target="_blank">💼 Ver LinkedIn</a>
         <a class="btn-outline" href="https://github.com/SebastianMonjePulecio" target="_blank">🐙 Ver GitHub</a>
       </div>
     </header>
-
     <div class="container">
       <section id="about">
         <h2>Sobre mí</h2>
-        <p>
-          Data Analyst con 4+ años de experiencia transformando datos complejos en estrategias de negocio. 
-          Diplomado en Machine Learning en la Universidad del Rosario.
-        </p>
-        <p style="margin-top: 15px;">
-          Especializado en modelos predictivos de churn, análisis de cartera financiera y automatización 
-          de procesos con Python. Busco oportunidades remotas donde pueda aportar valor con soluciones 
-          basadas en datos.
-        </p>
+        <p>Data Analyst con 4+ años de experiencia transformando datos complejos en estrategias de negocio. Diplomado en Machine Learning en la Universidad del Rosario.</p>
+        <p style="margin-top: 15px;">Especializado en modelos predictivos de churn, análisis de cartera financiera y automatización de procesos con Python. Busco oportunidades remotas donde pueda aportar valor con soluciones basadas en datos.</p>
       </section>
-
       <section id="skills">
         <h2>Tech Stack</h2>
         <div class="skills">
-          <div class="skill">🐍 Python</div>
-          <div class="skill">🐼 Pandas</div>
-          <div class="skill">🔢 NumPy</div>
-          <div class="skill">🤖 Scikit-learn</div>
-          <div class="skill">📊 Power BI</div>
-          <div class="skill">🐘 PostgreSQL</div>
-          <div class="skill">☁️ AWS/GCP</div>
-          <div class="skill">🔧 Git</div>
+          <div class="skill">🐍 Python</div><div class="skill">🐼 Pandas</div><div class="skill">🔢 NumPy</div><div class="skill">🤖 Scikit-learn</div>
+          <div class="skill">📊 Power BI</div><div class="skill">🐘 PostgreSQL</div><div class="skill">☁️ AWS/GCP</div><div class="skill">🔧 Git</div>
         </div>
       </section>
-
       <section id="projects">
         <h2>Proyectos</h2>
         <div class="grid">
-          
           <div class="card">
             <h3>🏦 Sistema Inteligente de Análisis de Cartera</h3>
-            <div class="tags">
-              <span class="tag-tech">Python</span>
-              <span class="tag-tech">Machine Learning</span>
-              <span class="tag-tech">Finanzas</span>
-            </div>
+            <div class="tags"><span class="tag-tech">Python</span><span class="tag-tech">ML</span><span class="tag-tech">Finanzas</span></div>
             <p>Sistema de ML para evaluar riesgo y rendimiento de carteras de inversión. Modelo de scoring crediticio.</p>
             <a href="https://github.com/SebastianMonjePulecio/Sistema-Inteligente-de-An-lisis-de-Cartera" class="repo-link" target="_blank">Ver en GitHub →</a>
           </div>
-
           <div class="card">
             <h3>🔮 Predicción de Churn</h3>
-            <div class="tags">
-              <span class="tag-tech">Python</span>
-              <span class="tag-tech">Scikit-learn</span>
-              <span class="tag-tech">ML</span>
-            </div>
-            <p>Modelo Random Forest para {
-      document.querySelectorAll('.lang-content').forEach(el => {
-        el.classList.remove('active');
-        el.style.display = 'none';
-      });
+            <div class="tags"><span class="tag-tech">Python</span><span class="tag-tech">Scikit-learn</span><span class="tag-tech">ML</span></div>
+            <p>Modelo Random Forest para predecir abandono de clientes. <strong>Resultado:</strong> 85% accuracy.</p>
+            <a href="https://github.com/SebastianMonjePulecio/customer-churn-prediction" class="repo-link" target="_blank">Ver en GitHub →</a>
+          </div>
+          <div class="card">
+            <h3>📊 Análisis de Ventas SQL</h3>
+            <div class="tags"><span class="tag-tech">SQL</span><span class="tag-tech">Python</span><span class="tag-tech">PostgreSQL</span></div>
+            <p>Análisis exploratorio de datos de ventas. Identificación de top productos y tendencias.</p>
+            <a href="https://github.com/SebastianMonjePulecio/sales-sql-analysis" class="repo-link" target="_blank">Ver en GitHub →</a>
+          </div>
+          <div class="card">
+            <h3>🌐 Portfolio Web</h3>
+            <div class="tags"><span class="tag-tech">HTML</span><span class="tag-tech">CSS</span><span class="tag-tech">JavaScript</span></div>
+            <p>Sitio web personal para mostrar proyectos de Data Analytics con selector de idioma.</p>
+            <a href="https://github.com/SebastianMonjePulecio/portfolio-web" class="repo-link" target="_blank">Ver en GitHub →</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+          <p>📩 <a href="mailto:monjesebas7@gmail.com">monjesebas7@gmail.com</a></p>
+          <p>💼 <a href="https://www.linkedin.com/in/sebastian-monje-5b5095269/" target="_blank">linkedin.com/in/sebastian-monje</a></p>
+          <p>🐙 <a href="https://github.com/SebastianMonjePulecio" target="_blank">github.com/SebastianMonjePulecio</a></p>
+          <p style="margin-top: 20px; color: #64748b;">📍 Disponible 100% remoto (LATAM/USA/EU)</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="content-en" class="lang-content">
+    <header>
+      <div class="tag">DATA ANALYST · 4+ YEARS EXP · PYTHON · MACHINE LEARNING</div>
+      <h1>I turn data into decisions</h1>
+      <p class="subtitle">Data Analyst focused on Machine Learning and predictive analytics. Specialized in churn models, financial analysis, and process automation.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/in/sebastian-monje-5b5095269/" target="_blank">💼 View LinkedIn</a>
+        <a class="btn-outline" href="https://github.com/SebastianMonjePulecio" target="_blank">🐙 View GitHub</a>
+      </div>
+    </header>
+    <div class="container">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Data Analyst with 4+ years of experience transforming complex data into business strategies. Machine Learning Diploma from Universidad del Rosario.</p>
+        <p style="margin-top: 15px;">Specialized in churn predictive models, financial portfolio analysis, and Python process automation. Seeking remote opportunities where I can add value with data-driven solutions.</p>
+      </section>
+      <section id="skills">
+        <h2>Tech Stack</h2>
+        <div class="skills">
+          <div class="skill">🐍 Python</div><div class="skill">🐼 Pandas</div><div class="skill">🔢 NumPy</div><div class="skill">🤖 Scikit-learn</div>
+          <div class="skill">📊 Power BI</div><div class="skill">🐘 PostgreSQL</div><div class="skill">☁️ AWS/GCP</div><div class="skill">🔧 Git</div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>🏦 Intelligent Portfolio Analysis System</h3>
+            <div class="tags"><span class="tag-tech">Python</span><span class="tag-tech">ML</span><span class="tag-tech">Finance</span></div>
+            <p>ML system to evaluate investment portfolio risk and performance. Credit scoring model.</p>
+            <a href="https://github.com/SebastianMonjePulecio/Sistema-Inteligente-de-An-lisis-de-Cartera" class="repo-link" target="_blank">View on GitHub →</a>
+          </div>
+          <div class="card">
+            <h3>🔮 Churn Prediction</h3>
+            <div class="tags"><span class="tag-tech">Python</span><span class="tag-tech">Scikit-learn</span><span class="tag-tech">ML</span></div>
+            <p>Random Forest model to predict customer churn. <strong>Result:</strong> 85% accuracy.</p>
+            <a href="https://github.com/SebastianMonjePulecio/customer-churn-prediction" class="repo-link" target="_blank">View on GitHub →</a>
+          </div>
+          <div class="card">
+            <h3>📊 SQL Sales Analysis</h3>
+            <div class="tags"><span class="tag-tech">SQL</span><span class="tag-tech">Python</span><span class="tag-tech">PostgreSQL</span></div>
+            <p>Exploratory data analysis of sales data. Top products and trends identification.</p>
+            <a href="https://github.com/SebastianMonjePulecio/sales-sql-analysis" class="repo-link" target="_blank">View on GitHub →</a>
+          </div>
+          <div class="card">
+            <h3>🌐 Portfolio Website</h3>
+            <div class="tags"><span class="tag-tech">HTML</span><span class="tag-tech">CSS</span><span class="tag-tech">JavaScript</span></div>
+            <p>Personal website to showcase Data Analytics projects with language selector.</p>
+            <a href="https://github.com/SebastianMonjePulecio/portfolio-web" class="repo-link" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <p>📩 <a href="mailto:monjesebas7@gmail.com">monjesebas7@gmail.com</a></p>
+          <p>💼 <a href="https://www.linkedin.com/in/sebastian-monje-5b5095269/" target="_blank">linkedin.com/in/sebastian-monje</a></p>
+          <p>🐙 <a href="https://github.com/SebastianMonjePulecio" target="_blank">github.com/SebastianMonjePulecio</a></p>
+          <p style="margin-top: 20px; color: #64748b;">📍 Available 100% remote (LATAM/USA/EU)</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>© 2026 Sebastián Monje | Data Analyst</footer>
+
+  <script>
+    function changeLanguage(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => { el.classList.remove('active'); el.style.display = 'none'; });
       document.getElementById('content-' + lang).style.display = 'block';
       document.getElementById('content-' + lang).classList.add('active');
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
-      document.querySelectorAll('nav a').forEach(link => {
-        link.textContent = link.getAttribute('data-' + lang);
-      });
+      document.querySelectorAll('nav a').forEach(link => { link.textContent = link.getAttribute('data-' + lang); });
       localStorage.setItem('preferredLang', lang);
     }
-    window.onload = function() {
-      const savedLang = localStorage.getItem('preferredLang');
-      if (savedLang === 'en') {
-        document.querySelector('.lang-btn:nth-child(2)').click();
-      }
-    };
+    window.onload = function() { const savedLang = localStorage.getItem('preferredLang'); if (savedLang === 'en') document.querySelector('.lang-btn:nth-child(2)').click(); };
   </script>
 </body>
 </html>
