@@ -22,6 +22,7 @@ nav {
   justify-content:center;
   gap:28px;
   padding:18px;
+  z-index:1000;
 }
 
 nav a {
@@ -34,6 +35,7 @@ nav a:hover { color:#38bdf8; }
   position:fixed;
   top:15px;
   right:20px;
+  z-index:1001;
 }
 
 .lang-btn {
@@ -49,20 +51,58 @@ nav a:hover { color:#38bdf8; }
 }
 
 header {
-  height:100vh;
+  height:70vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
+  padding:20px;
 }
 
 h1 { font-size:3rem; }
 
+.subtitle {
+  margin-top:10px;
+  color:#94a3b8;
+}
+
+.highlight {
+  color:#38bdf8;
+  margin-top:8px;
+}
+
+.cta {
+  margin-top:20px;
+}
+
+.btn {
+  padding:10px 16px;
+  background:#38bdf8;
+  color:#0b1220;
+  text-decoration:none;
+  border-radius:8px;
+  margin:5px;
+  display:inline-block;
+}
+
+.btn-outline {
+  padding:10px 16px;
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+  text-decoration:none;
+  border-radius:8px;
+}
+
 .container {
   max-width:1000px;
   margin:auto;
-  padding:100px 20px;
+  padding:80px 20px;
+}
+
+h2 {
+  margin-bottom:15px;
+  color:#38bdf8;
 }
 
 .grid {
@@ -75,6 +115,11 @@ h1 { font-size:3rem; }
   background:#1e293b;
   padding:20px;
   border-radius:12px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
 }
 
 .lang-content { display:none; }
@@ -85,8 +130,8 @@ h1 { font-size:3rem; }
 <body>
 
 <div class="lang-selector">
-  <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
-  <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+  <button class="lang-btn active" onclick="changeLanguage('es', this)">ES</button>
+  <button class="lang-btn" onclick="changeLanguage('en', this)">EN</button>
 </div>
 
 <nav>
@@ -99,20 +144,32 @@ h1 { font-size:3rem; }
 <div id="content-es" class="lang-content active">
 
 <header>
-  <h1>Convierto datos en decisiones</h1>
-  <p>Data Analyst con enfoque en Machine Learning</p>
+  <h1>Convierto datos en decisiones estratégicas</h1>
+  <p class="subtitle">Data Analyst | Machine Learning | Python</p>
+  <p class="highlight">+4 años de experiencia | Modelos predictivos | Automatización</p>
+
+  <div class="cta">
+    <a href="https://github.com/SebastianMonjePulecio" class="btn" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" class="btn-outline" target="_blank">LinkedIn</a>
+  </div>
 </header>
 
 <div class="container">
 
 <section id="about">
 <h2>Sobre mí</h2>
-<p>Data Analyst con 4+ años de experiencia.</p>
+<p>
+Soy Data Analyst con más de 4 años de experiencia en análisis de datos, 
+Machine Learning y automatización con Python.
+</p>
+<p style="margin-top:10px;">
+Especializado en modelos de churn, análisis financiero y generación de insights para negocio.
+</p>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
-<p>Python · Pandas · SQL · Power BI</p>
+<p>Python · Pandas · SQL · Power BI · Machine Learning</p>
 </section>
 
 <section id="projects">
@@ -122,12 +179,12 @@ h1 { font-size:3rem; }
 
 <div class="card">
 <h3>🏦 Análisis de Cartera</h3>
-<p>Modelo de riesgo financiero.</p>
+<p>Modelo de scoring crediticio para evaluar riesgo financiero.</p>
 </div>
 
 <div class="card">
 <h3>🎯 Forecasting</h3>
-<p>Predicción de demanda con ML.</p>
+<p>Predicción de demanda usando Machine Learning.</p>
 </div>
 
 <div class="card">
@@ -145,20 +202,31 @@ h1 { font-size:3rem; }
 <div id="content-en" class="lang-content">
 
 <header>
-  <h1>I turn data into decisions</h1>
-  <p>Data Analyst focused on Machine Learning</p>
+  <h1>I turn data into strategic decisions</h1>
+  <p class="subtitle">Data Analyst | Machine Learning | Python</p>
+  <p class="highlight">4+ years experience | Predictive models | Automation</p>
+
+  <div class="cta">
+    <a href="https://github.com/SebastianMonjePulecio" class="btn" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" class="btn-outline" target="_blank">LinkedIn</a>
+  </div>
 </header>
 
 <div class="container">
 
 <section id="about">
 <h2>About</h2>
-<p>Data Analyst with 4+ years of experience.</p>
+<p>
+Data Analyst with 4+ years of experience in data analysis, Machine Learning and automation.
+</p>
+<p style="margin-top:10px;">
+Focused on churn prediction, financial analysis and business insights.
+</p>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
-<p>Python · Pandas · SQL · Power BI</p>
+<p>Python · Pandas · SQL · Power BI · Machine Learning</p>
 </section>
 
 <section id="projects">
@@ -168,12 +236,12 @@ h1 { font-size:3rem; }
 
 <div class="card">
 <h3>🏦 Portfolio Analysis</h3>
-<p>Financial risk model.</p>
+<p>Credit scoring model to evaluate financial risk.</p>
 </div>
 
 <div class="card">
 <h3>🎯 Forecasting</h3>
-<p>Demand prediction using ML.</p>
+<p>Demand prediction using Machine Learning.</p>
 </div>
 
 <div class="card">
@@ -188,7 +256,7 @@ h1 { font-size:3rem; }
 </div>
 
 <script>
-function changeLanguage(lang) {
+function changeLanguage(lang, btn) {
 
   document.querySelectorAll('.lang-content').forEach(el=>{
     el.classList.remove('active');
@@ -196,11 +264,11 @@ function changeLanguage(lang) {
 
   document.getElementById('content-'+lang).classList.add('active');
 
-  document.querySelectorAll('.lang-btn').forEach(btn=>{
-    btn.classList.remove('active');
+  document.querySelectorAll('.lang-btn').forEach(b=>{
+    b.classList.remove('active');
   });
 
-  event.target.classList.add('active');
+  btn.classList.add('active');
 
   document.querySelectorAll('nav a').forEach(link=>{
     link.textContent = link.getAttribute('data-'+lang);
@@ -212,7 +280,7 @@ function changeLanguage(lang) {
 window.onload = ()=>{
   const lang = localStorage.getItem('lang');
   if(lang){
-    document.querySelector(`[onclick="changeLanguage('${lang}')"]`).click();
+    document.querySelector(`[onclick*="${lang}"]`).click();
   }
 }
 </script>
