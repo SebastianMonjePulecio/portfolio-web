@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #161b22;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h2 {
+  color: #58a6ff;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #238636;
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-outline {
+  border: 1px solid #58a6ff;
+  padding: 10px 20px;
+  color: #58a6ff;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills-container,
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card, .project {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover, .project:hover {
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #58a6ff;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+}

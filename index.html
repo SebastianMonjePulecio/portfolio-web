@@ -1,337 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sebastián Monje | Data Analyst</title>
+  <meta charset="UTF-8">
+  <title>Portafolio | IT - Data - Dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 
-<style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-
-html {
-  scroll-behavior: smooth;
-}
-
-body { background:#0b1220; color:#e2e8f0; }
-
-nav {
-  position:fixed;
-  top:0;
-  width:100%;
-  backdrop-filter:blur(14px);
-  background:rgba(10,15,25,0.6);
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  padding:18px;
-  z-index:1000;
-}
-
-nav a {
-  color:#94a3b8;
-  text-decoration:none;
-}
-nav a:hover { color:#38bdf8; }
-
-.lang-selector {
-  position:fixed;
-  top:15px;
-  right:20px;
-  z-index:1001;
-}
-
-.lang-btn {
-  background:#1e293b;
-  border:1px solid #38bdf8;
-  color:#94a3b8;
-  padding:5px 10px;
-  cursor:pointer;
-}
-.lang-btn.active {
-  background:#38bdf8;
-  color:#0b1220;
-}
-
-header {
-  height:60vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-}
-
-h1 { font-size:3rem; }
-
-.subtitle {
-  margin-top:10px;
-  color:#94a3b8;
-}
-
-.highlight {
-  color:#38bdf8;
-  margin-top:8px;
-}
-
-.cta {
-  margin-top:20px;
-}
-
-.btn {
-  padding:10px 16px;
-  background:#38bdf8;
-  color:#0b1220;
-  text-decoration:none;
-  border-radius:8px;
-  margin:5px;
-  display:inline-block;
-}
-
-.btn-outline {
-  padding:10px 16px;
-  border:1px solid #38bdf8;
-  color:#38bdf8;
-  text-decoration:none;
-  border-radius:8px;
-}
-
-.container {
-  max-width:1000px;
-  margin:auto;
-  padding:80px 20px;
-  text-align:center;
-}
-
-section {
-  margin-bottom:80px;
-  scroll-margin-top:100px;
-}
-
-h2 {
-  margin-bottom:15px;
-  color:#38bdf8;
-}
-
-p {
-  max-width:700px;
-  margin:auto;
-}
-
-.skills-grid {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:20px;
-}
-
-.skill {
-  background:#1e293b;
-  padding:10px 15px;
-  border-radius:10px;
-  font-size:14px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.card {
-  background:#1e293b;
-  padding:20px;
-  border-radius:12px;
-  text-align:left;
-  transition:0.3s;
-}
-
-.card:hover {
-  transform:translateY(-5px);
-}
-
-.lang-content { display:none; }
-.lang-content.active { display:block; }
-</style>
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-<div class="lang-selector">
-  <button class="lang-btn active" onclick="changeLanguage('es', this)">ES</button>
-  <button class="lang-btn" onclick="changeLanguage('en', this)">EN</button>
-</div>
-
+<!-- NAV -->
 <nav>
-  <a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a>
-  <a href="#skills" data-es="Skills" data-en="Skills">Skills</a>
-  <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#skills">Habilidades</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
 </nav>
 
-<!-- ESPAÑOL -->
-<div id="content-es" class="lang-content active">
+<!-- HERO -->
+<section class="hero">
+  <h1>Tu Nombre</h1>
+  <h2><span id="typing"></span></h2>
+  <p>
+    Profesional IT con experiencia en soporte técnico, análisis de datos 
+    y automatización de procesos con Python.
+  </p>
 
-<header>
-  <h1>Convierto datos en decisiones estratégicas</h1>
-  <p class="subtitle">Data Analyst | Machine Learning | Python</p>
-  <p class="highlight">+4 años de experiencia | Modelos predictivos | Automatización</p>
-
-  <div class="cta">
-    <a href="https://github.com/SebastianMonjePulecio" class="btn" target="_blank">GitHub</a>
-    <a href="https://linkedin.com" class="btn-outline" target="_blank">LinkedIn</a>
+  <div class="buttons">
+    <a href="#projects" class="btn">Ver proyectos</a>
+    <a href="#" class="btn-outline">Descargar CV</a>
   </div>
-</header>
+</section>
 
-<div class="container">
-
+<!-- SOBRE MI -->
 <section id="about">
-<h2>Sobre mí</h2>
-<p>
-Soy Data Analyst con más de 4 años de experiencia en análisis de datos, 
-Machine Learning y automatización con Python.
-</p>
-<p style="margin-top:10px;">
-Especializado en modelos de churn, análisis financiero y generación de insights para negocio.
-</p>
+  <h2>Sobre mí</h2>
+  <p>
+    Soy un profesional con experiencia en soporte técnico L1/L2, resolución de incidencias 
+    y atención a usuarios. Actualmente estoy en transición hacia el análisis de datos 
+    y desarrollo, combinando habilidades técnicas con automatización.
+  </p>
 </section>
 
+<!-- HABILIDADES -->
 <section id="skills">
-<h2>Skills</h2>
+  <h2>Habilidades</h2>
 
-<div class="skills-grid">
-  <div class="skill">🐍 Python</div>
-  <div class="skill">🐼 Pandas</div>
-  <div class="skill">🗄️ SQL</div>
-  <div class="skill">📊 Power BI</div>
-  <div class="skill">🤖 Machine Learning</div>
-</div>
+  <div class="skills-container">
 
-</section>
+    <div class="card">
+      <h3>🖥️ IT Support</h3>
+      <ul>
+        <li>Windows / macOS</li>
+        <li>Active Directory</li>
+        <li>Soporte remoto</li>
+        <li>Gestión de tickets</li>
+      </ul>
+    </div>
 
-<section id="projects">
-<h2>Proyectos</h2>
+    <div class="card">
+      <h3>📊 Data Analyst</h3>
+      <ul>
+        <li>Python (pandas, matplotlib)</li>
+        <li>Excel / Sheets</li>
+        <li>SQL básico</li>
+        <li>Análisis de datos</li>
+      </ul>
+    </div>
 
-<div class="grid">
+    <div class="card">
+      <h3>💻 Desarrollo</h3>
+      <ul>
+        <li>Python scripting</li>
+        <li>Automatización</li>
+        <li>APIs</li>
+        <li>Git</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>🏦 Análisis de Cartera</h3>
-<p>Modelo de scoring crediticio para evaluar riesgo financiero.</p>
-</div>
-
-<div class="card">
-<h3>🎯 Forecasting</h3>
-<p>Predicción de demanda usando Machine Learning.</p>
-</div>
-
-<div class="card">
-<h3>🔮 Churn</h3>
-<p>Modelo para predecir abandono de clientes.</p>
-</div>
-
-</div>
-</section>
-
-</div>
-</div>
-
-<!-- INGLÉS -->
-<div id="content-en" class="lang-content">
-
-<header>
-  <h1>I turn data into strategic decisions</h1>
-  <p class="subtitle">Data Analyst | Machine Learning | Python</p>
-  <p class="highlight">4+ years experience | Predictive models | Automation</p>
-
-  <div class="cta">
-    <a href="https://github.com/SebastianMonjePulecio" class="btn" target="_blank">GitHub</a>
-    <a href="https://linkedin.com" class="btn-outline" target="_blank">LinkedIn</a>
   </div>
-</header>
-
-<div class="container">
-
-<section id="about">
-<h2>About</h2>
-<p>
-Data Analyst with 4+ years of experience in data analysis, Machine Learning and automation.
-</p>
-<p style="margin-top:10px;">
-Focused on churn prediction, financial analysis and business insights.
-</p>
 </section>
 
-<section id="skills">
-<h2>Skills</h2>
-
-<div class="skills-grid">
-  <div class="skill">🐍 Python</div>
-  <div class="skill">🐼 Pandas</div>
-  <div class="skill">🗄️ SQL</div>
-  <div class="skill">📊 Power BI</div>
-  <div class="skill">🤖 Machine Learning</div>
-</div>
-
-</section>
-
+<!-- PROYECTOS -->
 <section id="projects">
-<h2>Projects</h2>
+  <h2>Proyectos</h2>
 
-<div class="grid">
+  <div class="projects-container">
 
-<div class="card">
-<h3>🏦 Portfolio Analysis</h3>
-<p>Credit scoring model to evaluate financial risk.</p>
-</div>
+    <div class="project">
+      <h3>Automatización con Python</h3>
+      <p>Script para automatizar tareas repetitivas y scraping de datos.</p>
+      <a href="#">GitHub</a>
+    </div>
 
-<div class="card">
-<h3>🎯 Forecasting</h3>
-<p>Demand prediction using Machine Learning.</p>
-</div>
+    <div class="project">
+      <h3>Análisis de Datos</h3>
+      <p>Dashboard con visualización de datos usando Python.</p>
+      <a href="#">GitHub</a>
+    </div>
 
-<div class="card">
-<h3>🔮 Churn</h3>
-<p>Customer churn prediction model.</p>
-</div>
+    <div class="project">
+      <h3>SaaS Recomendador</h3>
+      <p>App que recomienda videojuegos según preferencias del usuario.</p>
+      <a href="#">GitHub</a>
+    </div>
 
-</div>
+  </div>
 </section>
 
-</div>
-</div>
+<!-- EXPERIENCIA -->
+<section>
+  <h2>Experiencia</h2>
+  <p>
+    Experiencia en soporte técnico resolviendo incidencias, gestionando usuarios 
+    y brindando soporte a nivel empresarial. Enfocado en mejorar procesos mediante 
+    automatización y análisis de datos.
+  </p>
+</section>
 
-<script>
-function changeLanguage(lang, btn) {
+<!-- CONTACTO -->
+<section id="contact">
+  <h2>Contacto</h2>
 
-  document.querySelectorAll('.lang-content').forEach(el=>{
-    el.classList.remove('active');
-  });
+  <form>
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo" required>
+    <textarea placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
 
-  document.getElementById('content-'+lang).classList.add('active');
+  <div class="socials">
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+</section>
 
-  document.querySelectorAll('.lang-btn').forEach(b=>{
-    b.classList.remove('active');
-  });
-
-  btn.classList.add('active');
-
-  document.querySelectorAll('nav a').forEach(link=>{
-    link.textContent = link.getAttribute('data-'+lang);
-  });
-
-  localStorage.setItem('lang',lang);
-}
-
-window.onload = ()=>{
-  const lang = localStorage.getItem('lang');
-  if(lang){
-    document.querySelector(`[onclick*="${lang}"]`).click();
-  }
-}
-</script>
+<footer>
+  <p>© 2026 - Portafolio</p>
+</footer>
 
 </body>
 </html>
