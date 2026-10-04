@@ -2,149 +2,280 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio | IT - Data - Dev</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastián Monje Pulecio · Analista de datos</title>
+  <meta name="description" content="Portafolio de Sebastián Monje Pulecio, analista de datos junior en Neiva, Colombia. Proyectos de análisis, machine learning y forecasting con Python, SQL y Power BI.">
+  <meta name="author" content="Sebastián Monje Pulecio">
+  <meta name="theme-color" content="#14262b">
 
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <!-- Vista previa al compartir el enlace (LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sebastián Monje Pulecio · Analista de datos">
+  <meta property="og:description" content="Proyectos de análisis de datos, machine learning y forecasting con Python, SQL y Power BI.">
+  <meta property="og:url" content="https://sebastianmonjepulecio.github.io/portfolio-web/">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
 
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/translations.js"></script>
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <h2>Portfolio</h2>
-  <ul>
-    <li><a href="#about">Sobre mí</a></li>
-    <li><a href="#skills">Habilidades</a></li>
-    <li><a href="#projects">Proyectos</a></li>
-    <li><a href="#contact">Contacto</a></li>
-  </ul>
-</nav>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Tu Nombre</h1>
-  <h2><span id="typing"></span></h2>
-  <p>
-    Profesional IT con experiencia en soporte técnico, análisis de datos 
-    y automatización de procesos con Python.
-  </p>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top">Sebastián Monje Pulecio</a>
 
-  <div class="buttons">
-    <a href="#projects" class="btn">Ver proyectos</a>
-    <a href="#" class="btn-outline">Descargar CV</a>
-  </div>
-</section>
+      <nav aria-label="Principal" data-i18n-attr="aria-label:navLabel">
+        <ul class="nav-list">
+          <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
+          <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
+          <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contacto</a></li>
+        </ul>
+      </nav>
 
-<!-- SOBRE MI -->
-<section id="about">
-  <h2>Sobre mí</h2>
-  <p>
-    Soy un profesional con experiencia en soporte técnico L1/L2, resolución de incidencias 
-    y atención a usuarios. Actualmente estoy en transición hacia el análisis de datos 
-    y desarrollo, combinando habilidades técnicas con automatización.
-  </p>
-</section>
+      <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-attr="aria-label:langLabel">
+        <button type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+    </div>
+  </header>
 
-<!-- HABILIDADES -->
-<section id="skills">
-  <h2>Habilidades</h2>
+  <main id="main">
 
-  <div class="skills-container">
+    <!-- INTRO -->
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <p class="hero__role" data-i18n="heroRole">Analista de datos junior en Neiva, Colombia</p>
+      <h1 id="hero-title" class="hero__title" data-i18n="heroTitle">
+        Analizo datos de negocio y construyo modelos que ayudan a decidir.
+      </h1>
+      <p class="hero__lead" data-i18n="heroLead">
+        Limpio y exploro datos con Python y SQL, entreno modelos de machine learning
+        y los convierto en herramientas que otras personas pueden usar:
+        dashboards en Streamlit, reportes en Power BI y APIs con FastAPI.
+      </p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="#projects" data-i18n="ctaProjects">Ver proyectos</a>
+        <a class="button button--ghost" href="assets/docs/cv-sebastian-monje-pulecio.pdf" download data-i18n="ctaCv">Descargar CV (PDF)</a>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>🖥️ IT Support</h3>
-      <ul>
-        <li>Windows / macOS</li>
-        <li>Active Directory</li>
-        <li>Soporte remoto</li>
-        <li>Gestión de tickets</li>
+    <!-- PROYECTOS -->
+    <section class="projects wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title" data-i18n="projectsTitle">Proyectos</h2>
+        <p data-i18n="projectsIntro">
+          Cada proyecto parte de una pregunta de negocio. Los datos son públicos o simulados,
+          y el código está en GitHub.
+        </p>
+      </div>
+
+      <div class="ledger" role="list">
+        <div class="ledger__head" aria-hidden="true">
+          <span data-i18n="colProject">Proyecto</span>
+          <span data-i18n="colWork">Qué hice</span>
+          <span data-i18n="colResult">Resultado</span>
+        </div>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p1Title">Predicción de demanda con MLOps</h3>
+            <p data-i18n="p1Problem">¿Cuánto se va a vender de cada producto para planear inventario?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p1Work">Pipeline completo: ETL en SQLite, 23 variables, ensamble de XGBoost, LightGBM y Gradient Boosting, API en FastAPI y dashboard en Streamlit.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Python</li><li>XGBoost</li><li>FastAPI</li><li>Streamlit</li></ul>
+          </div>
+          <div class="row__result">
+            <p class="figure" data-i18n="p1Figure">2,49 %</p>
+            <p data-i18n="p1Result">de error medio (MAPE) sobre 73.000 registros de ventas simulados.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://github.com/SebastianMonjePulecio/Sistema-End-to-End-de-Forecasting-de-Demanda-con-MLOps" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p2Title">OpsVision AI: tiempos de entrega</h3>
+            <p data-i18n="p2Problem">¿Por qué se retrasan los domicilios y cuánto van a tardar?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p2Work">Analicé el efecto del tráfico, el clima y la distancia, entrené un modelo que estima el tiempo de entrega y armé un simulador de escenarios.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Python</li><li>scikit-learn</li><li>Streamlit</li></ul>
+          </div>
+          <div class="row__result">
+            <p data-i18n="p2Result">El tráfico es el factor que más retrasa las entregas; el clima adverso lo empeora.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://opsvision-ai.streamlit.app/" data-i18n="demo">Demo en vivo</a></li>
+            <li><a href="https://github.com/SebastianMonjePulecio/opsvision-ai-" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p3Title">Predicción de abandono de clientes</h3>
+            <p data-i18n="p3Problem">¿Qué clientes están por irse y por qué?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p3Work">Limpieza y feature engineering, modelo Random Forest y una app en Streamlit para simular un cliente y ver su riesgo en tiempo real.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Pandas</li><li>Random Forest</li><li>Streamlit</li></ul>
+          </div>
+          <div class="row__result">
+            <p data-i18n="p3Result">Los clientes con menos de 6 meses y mucho contacto con soporte son los de mayor riesgo.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://github.com/SebastianMonjePulecio/customer-churn-prediction" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p4Title">Rentabilidad y retención en e-commerce</h3>
+            <p data-i18n="p4Problem">¿Cómo crecer en ventas sin perder margen?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p4Work">Generé un caso de negocio consistente, lo analicé con Python y SQL y construí un dashboard en Streamlit por segmento, canal y categoría.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Python</li><li>SQL</li><li>Streamlit</li></ul>
+          </div>
+          <div class="row__result">
+            <p data-i18n="p4Result">Identifica qué canales y categorías venden más pero dejan menos utilidad, y qué clientes están cerca de abandonar.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://github.com/SebastianMonjePulecio/ecommerce-profitability-retention-analytics" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p5Title">Análisis de cartera y riesgo crediticio</h3>
+            <p data-i18n="p5Problem">¿A qué clientes cobrar primero?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p5Work">Segmenté la cartera por niveles de mora, clasifiqué el riesgo y calculé indicadores financieros en un dashboard de Power BI.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Pandas</li><li>Power BI</li><li>Excel</li></ul>
+          </div>
+          <div class="row__result">
+            <p data-i18n="p5Result">Un grupo pequeño de clientes con mora alta concentra la mayor parte del riesgo.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://github.com/SebastianMonjePulecio/Sistema-Inteligente-de-An-lisis-de-Cartera" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p6Title">Retrasos de vuelos</h3>
+            <p data-i18n="p6Problem">¿Se puede anticipar qué vuelos van a salir tarde?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p6Work">ETL en Python, variables de tiempo, clima y ruta, modelo Random Forest evaluado con ROC-AUC y dashboard ejecutivo.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Python</li><li>Random Forest</li><li>Streamlit</li></ul>
+          </div>
+          <div class="row__result">
+            <p data-i18n="p6Result">El clima severo, las horas pico y la distancia explican la mayoría de los retrasos.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://github.com/SebastianMonjePulecio/flight-delay-analysis" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+
+        <article class="row" role="listitem">
+          <div class="row__project">
+            <h3 data-i18n="p7Title">Análisis de ventas con SQL y Power BI</h3>
+            <p data-i18n="p7Problem">¿Qué productos y clientes mueven las ventas?</p>
+          </div>
+          <div class="row__work">
+            <p data-i18n="p7Work">Consultas SQL, exploración en Jupyter y un dashboard en Power BI sobre dos años de ventas.</p>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>SQL</li><li>Pandas</li><li>Power BI</li></ul>
+          </div>
+          <div class="row__result">
+            <p data-i18n="p7Result">Las ventas son estacionales y los clientes premium tienen el mayor gasto promedio.</p>
+          </div>
+          <ul class="row__links">
+            <li><a href="https://github.com/SebastianMonjePulecio/sales-sql-analysis" data-i18n="code">Código</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="skills wrap" id="skills" aria-labelledby="skills-title">
+      <div class="section-head">
+        <h2 id="skills-title" data-i18n="skillsTitle">Habilidades</h2>
+      </div>
+      <dl class="skills__grid">
+        <div>
+          <dt data-i18n="skAnalysis">Análisis</dt>
+          <dd data-i18n="skAnalysisList">Python (Pandas, NumPy), SQL, análisis exploratorio, limpieza y transformación de datos</dd>
+        </div>
+        <div>
+          <dt data-i18n="skModels">Modelado</dt>
+          <dd data-i18n="skModelsList">scikit-learn, Random Forest, XGBoost, LightGBM, feature engineering, evaluación de modelos</dd>
+        </div>
+        <div>
+          <dt data-i18n="skViz">Visualización</dt>
+          <dd data-i18n="skVizList">Power BI, Streamlit, Plotly, Matplotlib</dd>
+        </div>
+        <div>
+          <dt data-i18n="skTools">Herramientas</dt>
+          <dd data-i18n="skToolsList">Git y GitHub, FastAPI, SQLite, Jupyter, Excel</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div class="section-head">
+        <h2 id="about-title" data-i18n="aboutTitle">Sobre mí</h2>
+      </div>
+      <div class="about__body">
+        <p data-i18n="aboutP1">
+          Me interesa convertir datos en información útil para decidir. En mis proyectos
+          trabajo todo el recorrido: desde recolectar y limpiar los datos hasta explicar
+          qué significan los resultados para el negocio.
+        </p>
+        <p data-i18n="aboutP2">
+          Busco mi primer rol como analista de datos, donde pueda seguir aprendiendo
+          con un equipo y aportar desde el primer día.
+        </p>
+        <h3 data-i18n="eduTitle">Formación</h3>
+        <ul class="edu">
+          <li data-i18n="edu1">Tecnólogo en Análisis y Desarrollo de Software, en curso</li>
+          <li data-i18n="edu2">Diplomado en Inteligencia Artificial aplicada al Machine Learning</li>
+          <li data-i18n="edu3">Técnico en Sistemas, SENA (2016–2017)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n="contactTitle">¿Hablamos?</h2>
+      <p data-i18n="contactText">Si tienes una vacante o un proyecto con datos, escríbeme.</p>
+      <ul class="contact__links">
+        <li><a class="contact__mail" href="mailto:monjesebas7@gmail.com">monjesebas7@gmail.com</a></li>
+        <li><a href="https://github.com/SebastianMonjePulecio">GitHub</a></li>
+        <li><a href="assets/docs/cv-sebastian-monje-pulecio.pdf" download data-i18n="cvShort">CV en PDF</a></li>
       </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Sebastián Monje Pulecio</p>
     </div>
-
-    <div class="card">
-      <h3>📊 Data Analyst</h3>
-      <ul>
-        <li>Python (pandas, matplotlib)</li>
-        <li>Excel / Sheets</li>
-        <li>SQL básico</li>
-        <li>Análisis de datos</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>💻 Desarrollo</h3>
-      <ul>
-        <li>Python scripting</li>
-        <li>Automatización</li>
-        <li>APIs</li>
-        <li>Git</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROYECTOS -->
-<section id="projects">
-  <h2>Proyectos</h2>
-
-  <div class="projects-container">
-
-    <div class="project">
-      <h3>Automatización con Python</h3>
-      <p>Script para automatizar tareas repetitivas y scraping de datos.</p>
-      <a href="#">GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>Análisis de Datos</h3>
-      <p>Dashboard con visualización de datos usando Python.</p>
-      <a href="#">GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>SaaS Recomendador</h3>
-      <p>App que recomienda videojuegos según preferencias del usuario.</p>
-      <a href="#">GitHub</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- EXPERIENCIA -->
-<section>
-  <h2>Experiencia</h2>
-  <p>
-    Experiencia en soporte técnico resolviendo incidencias, gestionando usuarios 
-    y brindando soporte a nivel empresarial. Enfocado en mejorar procesos mediante 
-    automatización y análisis de datos.
-  </p>
-</section>
-
-<!-- CONTACTO -->
-<section id="contact">
-  <h2>Contacto</h2>
-
-  <form>
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Correo" required>
-    <textarea placeholder="Mensaje"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-
-  <div class="socials">
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 - Portafolio</p>
-</footer>
+  </footer>
 
 </body>
 </html>
