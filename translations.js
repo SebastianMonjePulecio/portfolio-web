@@ -5,25 +5,38 @@
  * así que aquí solo hace falta la versión en inglés de cada clave data-i18n.
  */
 window.TRANSLATIONS_EN = {
-  pageTitle: "Sebastián Monje Pulecio · Data Analyst",
+  pageTitle: "Sebastián Monje Pulecio · RPA and Python Developer",
   pageDescription:
-    "Portfolio of Sebastián Monje Pulecio, junior data analyst in Neiva, Colombia. Data analysis, machine learning and forecasting projects with Python, SQL and Power BI.",
+    "Portfolio of Sebastián Monje Pulecio, RPA and Python automation developer in Neiva, Colombia. Bots for healthcare billing, accounts receivable and claim denials, plus machine learning projects.",
 
   skip: "Skip to content",
   navLabel: "Main",
   langLabel: "Language",
   techLabel: "Technologies",
+  navExperience: "Experience",
   navProjects: "Projects",
   navSkills: "Skills",
   navAbout: "About",
   navContact: "Contact",
 
-  heroRole: "Junior data analyst in Neiva, Colombia",
-  heroTitle: "I analyze business data and build models that help people decide.",
+  heroRole: "RPA and Python developer in Neiva, Colombia",
+  heroTitle: "I automate repetitive work with RPA bots and Python.",
   heroLead:
-    "I clean and explore data with Python and SQL, train machine learning models and turn them into tools other people can use: Streamlit dashboards, Power BI reports and FastAPI services.",
-  ctaProjects: "See projects",
+    "I build bots that remove manual work from billing, accounts receivable and claim denials in healthcare. I also build machine learning models, FastAPI services and dashboards other people can use.",
+  ctaProjects: "See my work",
   ctaCv: "Download CV (PDF, Spanish)",
+
+  expTitle: "Experience",
+  job1Dates: "Jun 2026 – present",
+  job1Title: "IT Analyst, RPA development",
+  job1a: "RPA bots that download receivables portfolio, accounts receivable (AR) and invoice traceability reports.",
+  job1b: "Bot for bulk upload of claim-denial supporting documents and automatic validation of whether each denial is justified.",
+  job1c: "Automatic matching of PDF filing certificates against the billing system.",
+  job1d: "Automated reports and KPIs on filing times and inconsistencies.",
+  job2Dates: "May 2022 – Jan 2026",
+  job2a: "Remote L1/L2 technical support for 50+ users.",
+  job2b: "User and access management in Active Directory, Microsoft 365 and Google Workspace.",
+  job2c: "Incident management in Jira and procedure documentation.",
 
   projectsTitle: "Projects",
   projectsIntro:
@@ -78,6 +91,10 @@ window.TRANSLATIONS_EN = {
   p7Result: "Sales are seasonal, and premium customers have the highest average spend.",
 
   skillsTitle: "Skills",
+  skRpa: "Automation",
+  skRpaList: "UiPath, Power Automate, Selenium, VBA macros, applied AI (LLM)",
+  skHealth: "Healthcare",
+  skHealthList: "Billing, filing, accounts receivable and claim denials with insurers; RIPS JSON, SIIFA",
   skAnalysis: "Analysis",
   skAnalysisList: "Python (Pandas, NumPy), SQL, exploratory analysis, data cleaning and transformation",
   skModels: "Modeling",
@@ -85,19 +102,19 @@ window.TRANSLATIONS_EN = {
   skViz: "Visualization",
   skVizList: "Power BI, Streamlit, Plotly, Matplotlib",
   skTools: "Tools",
-  skToolsList: "Git and GitHub, FastAPI, SQLite, Jupyter, Excel",
+  skToolsList: "Git and GitHub, FastAPI, SQLite, Jupyter, Excel, Jira",
 
   aboutTitle: "About me",
   aboutP1:
-    "I like turning data into information people can act on. In my projects I cover the whole path, from collecting and cleaning the data to explaining what the results mean for the business.",
+    "I have 4 years in technology, 3+ of them fully remote. I started in IT support and infrastructure, and today I build automations that save hours of data entry and reduce errors in administrative processes.",
   aboutP2:
-    "I'm looking for my first data analyst role, where I can keep learning with a team and contribute from day one.",
+    "I'm interested in RPA development, automation and data roles, remote or in Neiva. I document every process so the team can run it without depending on me.",
   eduTitle: "Education",
   edu1: "Technologist in Software Analysis and Development, in progress",
-  edu2: "Diploma in Artificial Intelligence applied to Machine Learning",
+  edu2: "Diploma in Applied Artificial Intelligence: Machine Learning for Large Language Models, Universidad del Rosario (2026)",
   edu3: "Systems Technician, SENA (2016–2017)",
 
   contactTitle: "Let's talk",
-  contactText: "If you have an opening or a data project, write to me.",
+  contactText: "If you have an opening or a process to automate, write to me.",
   cvShort: "CV in PDF (Spanish)",
 };
