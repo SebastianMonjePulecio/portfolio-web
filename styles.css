@@ -262,6 +262,19 @@ main > section + section {
 }
 .row__links { display: grid; gap: 0.25rem; align-content: start; font-weight: 600; }
 
+/* Experiencia */
+.jobs { display: grid; gap: var(--space-4); }
+.job {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: var(--space-3);
+  max-width: 52rem;
+}
+.job__dates { color: var(--c-muted); font-weight: 600; font-size: var(--t-sm); padding-top: 0.3rem; }
+.job h3 { font-size: var(--t-md); }
+.job__org { color: var(--c-muted); }
+.job__list { list-style: disc; padding-left: 1.25rem; margin-top: var(--space-1); display: grid; gap: 0.25rem; }
+
 /* Habilidades */
 .skills__grid {
   display: grid;
@@ -315,7 +328,10 @@ main > section + section {
 @media (max-width: 40rem) {
   .site-header__inner { flex-wrap: wrap; gap: var(--space-1) var(--space-2); padding-block: var(--space-1); }
   nav { order: 3; width: 100%; overflow-x: auto; }
-  .nav-list { gap: var(--space-2); font-size: var(--t-sm); }
+  .nav-list { flex-wrap: wrap; gap: 0.25rem var(--space-2); font-size: var(--t-sm); }
+  .nav-list a { white-space: nowrap; }
+  [id] { scroll-margin-top: 7rem; }
   .hero { padding-block: var(--space-5) var(--space-4); }
   .contact__mail { font-size: var(--t-md); }
+  .job { grid-template-columns: 1fr; gap: var(--space-1); }
 }
