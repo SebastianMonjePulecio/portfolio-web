@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebastián Monje Pulecio · Analista de datos</title>
-  <meta name="description" content="Portafolio de Sebastián Monje Pulecio, analista de datos junior en Neiva, Colombia. Proyectos de análisis, machine learning y forecasting con Python, SQL y Power BI.">
+  <title>Sebastián Monje Pulecio · Desarrollador RPA y Python</title>
+  <meta name="description" content="Portafolio de Sebastián Monje Pulecio, desarrollador de automatizaciones RPA y Python en Neiva, Colombia. Bots para facturación, cartera y glosas en salud, y proyectos de machine learning.">
   <meta name="author" content="Sebastián Monje Pulecio">
   <meta name="theme-color" content="#14262b">
 
   <!-- Vista previa al compartir el enlace (LinkedIn, WhatsApp, etc.) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sebastián Monje Pulecio · Analista de datos">
-  <meta property="og:description" content="Proyectos de análisis de datos, machine learning y forecasting con Python, SQL y Power BI.">
+  <meta property="og:title" content="Sebastián Monje Pulecio · Desarrollador RPA y Python">
+  <meta property="og:description" content="Automatización de procesos con RPA y Python, y proyectos de datos y machine learning.">
   <meta property="og:url" content="https://sebastianmonjepulecio.github.io/portfolio-web/">
   <meta property="og:locale" content="es_CO">
   <meta property="og:locale:alternate" content="en_US">
@@ -36,6 +36,7 @@
 
       <nav aria-label="Principal" data-i18n-attr="aria-label:navLabel">
         <ul class="nav-list">
+          <li><a href="#experience" data-i18n="navExperience">Experiencia</a></li>
           <li><a href="#projects" data-i18n="navProjects">Proyectos</a></li>
           <li><a href="#skills" data-i18n="navSkills">Habilidades</a></li>
           <li><a href="#about" data-i18n="navAbout">Sobre mí</a></li>
@@ -54,18 +55,53 @@
 
     <!-- INTRO -->
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
-      <p class="hero__role" data-i18n="heroRole">Analista de datos junior en Neiva, Colombia</p>
+      <p class="hero__role" data-i18n="heroRole">Desarrollador RPA y Python en Neiva, Colombia</p>
       <h1 id="hero-title" class="hero__title" data-i18n="heroTitle">
-        Analizo datos de negocio y construyo modelos que ayudan a decidir.
+        Automatizo el trabajo repetitivo con bots RPA y Python.
       </h1>
       <p class="hero__lead" data-i18n="heroLead">
-        Limpio y exploro datos con Python y SQL, entreno modelos de machine learning
-        y los convierto en herramientas que otras personas pueden usar:
-        dashboards en Streamlit, reportes en Power BI y APIs con FastAPI.
+        Desarrollo bots que eliminan trabajo manual en facturación, cartera y glosas
+        del sector salud. También construyo modelos de machine learning, APIs con FastAPI
+        y dashboards que otras personas pueden usar.
       </p>
       <div class="hero__actions">
-        <a class="button button--primary" href="#projects" data-i18n="ctaProjects">Ver proyectos</a>
+        <a class="button button--primary" href="#experience" data-i18n="ctaProjects">Ver mi trabajo</a>
         <a class="button button--ghost" href="cv-sebastian-monje-pulecio.pdf" download data-i18n="ctaCv">Descargar CV (PDF)</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="experience wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <h2 id="experience-title" data-i18n="expTitle">Experiencia</h2>
+      </div>
+      <div class="jobs">
+        <article class="job">
+          <p class="job__dates" data-i18n="job1Dates">Jun 2026 – actual</p>
+          <div>
+            <h3 data-i18n="job1Title">Analista de Informática, desarrollo RPA</h3>
+            <p class="job__org">IT Management</p>
+            <ul class="job__list">
+              <li data-i18n="job1a">Bots RPA que descargan los reportes de cartera, cuentas por cobrar y trazabilidad de facturas.</li>
+              <li data-i18n="job1b">Bot de cargue masivo de soportes de glosas y validación automática de si cada glosa está justificada.</li>
+              <li data-i18n="job1c">Cruce automático de certificados de radicación en PDF con el sistema de facturación.</li>
+              <li data-i18n="job1d">Reportes e indicadores automáticos de tiempos de radicación e inconsistencias.</li>
+            </ul>
+            <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label:techLabel"><li>Python</li><li>Selenium</li><li>UiPath</li><li>Power Automate</li><li>VBA</li></ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="job__dates" data-i18n="job2Dates">May 2022 – ene 2026</p>
+          <div>
+            <h3>IT Engineer</h3>
+            <p class="job__org">Cloud Boosting Services S.A.S. (Enube)</p>
+            <ul class="job__list">
+              <li data-i18n="job2a">Soporte técnico L1/L2 remoto a más de 50 usuarios.</li>
+              <li data-i18n="job2b">Administración de usuarios y accesos en Active Directory, Microsoft 365 y Google Workspace.</li>
+              <li data-i18n="job2c">Gestión de incidencias en Jira y documentación de procedimientos.</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -216,6 +252,14 @@
       </div>
       <dl class="skills__grid">
         <div>
+          <dt data-i18n="skRpa">Automatización</dt>
+          <dd data-i18n="skRpaList">UiPath, Power Automate, Selenium, macros VBA, IA aplicada (LLM)</dd>
+        </div>
+        <div>
+          <dt data-i18n="skHealth">Sector salud</dt>
+          <dd data-i18n="skHealthList">Facturación, radicación, cartera y glosas ante EPS y aseguradoras; RIPS JSON, SIIFA</dd>
+        </div>
+        <div>
           <dt data-i18n="skAnalysis">Análisis</dt>
           <dd data-i18n="skAnalysisList">Python (Pandas, NumPy), SQL, análisis exploratorio, limpieza y transformación de datos</dd>
         </div>
@@ -229,7 +273,7 @@
         </div>
         <div>
           <dt data-i18n="skTools">Herramientas</dt>
-          <dd data-i18n="skToolsList">Git y GitHub, FastAPI, SQLite, Jupyter, Excel</dd>
+          <dd data-i18n="skToolsList">Git y GitHub, FastAPI, SQLite, Jupyter, Excel, Jira</dd>
         </div>
       </dl>
     </section>
@@ -241,18 +285,18 @@
       </div>
       <div class="about__body">
         <p data-i18n="aboutP1">
-          Me interesa convertir datos en información útil para decidir. En mis proyectos
-          trabajo todo el recorrido: desde recolectar y limpiar los datos hasta explicar
-          qué significan los resultados para el negocio.
+          Llevo 4 años en tecnología, más de 3 en trabajo 100 % remoto. Empecé en soporte
+          e infraestructura IT y hoy desarrollo automatizaciones que ahorran horas de
+          digitación y reducen errores en procesos administrativos.
         </p>
         <p data-i18n="aboutP2">
-          Busco mi primer rol como analista de datos, donde pueda seguir aprendiendo
-          con un equipo y aportar desde el primer día.
+          Me interesan roles de desarrollo RPA, automatización y datos, remotos o en Neiva.
+          Documento cada proceso para que el equipo pueda operarlo sin depender de mí.
         </p>
         <h3 data-i18n="eduTitle">Formación</h3>
         <ul class="edu">
           <li data-i18n="edu1">Tecnólogo en Análisis y Desarrollo de Software, en curso</li>
-          <li data-i18n="edu2">Diplomado en Inteligencia Artificial aplicada al Machine Learning</li>
+          <li data-i18n="edu2">Diplomado en Inteligencia Artificial Aplicada: Machine Learning a los Modelos Grandes de Lenguaje, Universidad del Rosario (2026)</li>
           <li data-i18n="edu3">Técnico en Sistemas, SENA (2016–2017)</li>
         </ul>
       </div>
@@ -261,7 +305,7 @@
     <!-- CONTACTO -->
     <section class="contact wrap" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title" data-i18n="contactTitle">¿Hablamos?</h2>
-      <p data-i18n="contactText">Si tienes una vacante o un proyecto con datos, escríbeme.</p>
+      <p data-i18n="contactText">Si tienes una vacante o un proceso que automatizar, escríbeme.</p>
       <ul class="contact__links">
         <li><a class="contact__mail" href="mailto:monjesebas7@gmail.com">monjesebas7@gmail.com</a></li>
         <li><a href="https://github.com/SebastianMonjePulecio">GitHub</a></li>
