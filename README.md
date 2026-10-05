@@ -8,15 +8,12 @@ Portafolio personal como analista de datos junior. Sitio estático (HTML, CSS y 
 
 ```
 portfolio-web/
-├── index.html                 # Contenido de la página (en español)
-├── assets/
-│   ├── css/styles.css         # Estilos: tokens, base, layout, componentes, secciones
-│   ├── js/
-│   │   ├── translations.js    # Textos en inglés
-│   │   └── main.js            # Cambio de idioma y año del pie de página
-│   ├── docs/
-│   │   └── cv-sebastian-monje-pulecio.pdf
-│   └── img/favicon.svg
+├── index.html                       # Contenido de la página (en español)
+├── styles.css                       # Estilos: tokens, base, layout, componentes, secciones
+├── translations.js                  # Textos en inglés
+├── main.js                          # Cambio de idioma y año del pie de página
+├── cv-sebastian-monje-pulecio.pdf   # Hoja de vida descargable
+├── favicon.svg
 └── README.md
 ```
 
@@ -31,10 +28,10 @@ python -m http.server 8000
 
 ## Cómo actualizar el contenido
 
-- **Agregar un proyecto:** copia un bloque `<article class="row">` en `index.html`, cambia los textos y enlaces, y ponle claves `data-i18n` nuevas (por ejemplo `p8Title`, `p8Problem`…). Luego agrega esas mismas claves con el texto en inglés en `assets/js/translations.js`.
-- **Cambiar un texto:** el español se edita en `index.html`; el inglés, en `assets/js/translations.js` con la misma clave.
-- **Actualizar el CV:** reemplaza `assets/docs/cv-sebastian-monje-pulecio.pdf` conservando el nombre del archivo.
-- **Colores y tipografía:** se cambian en las variables al inicio de `assets/css/styles.css`.
+- **Agregar un proyecto:** copia un bloque `<article class="row">` en `index.html`, cambia los textos y enlaces, y ponle claves `data-i18n` nuevas (por ejemplo `p8Title`, `p8Problem`…). Luego agrega esas mismas claves con el texto en inglés en `translations.js`.
+- **Cambiar un texto:** el español se edita en `index.html`; el inglés, en `translations.js` con la misma clave.
+- **Actualizar el CV:** reemplaza `cv-sebastian-monje-pulecio.pdf` conservando el nombre del archivo.
+- **Colores y tipografía:** se cambian en las variables al inicio de `styles.css`.
 
 ## Idiomas
 
